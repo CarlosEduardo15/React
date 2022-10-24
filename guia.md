@@ -70,3 +70,27 @@ render(){
 
 root.render(<Timer />);
 ~~~
+
+
+Aplicación usando props y state que genera una lista que se actualiza y se enumera conforme metes los datos en el recuadro y confirmas.
+
+~~~bash
+class TodoApp extends React.Component{
+contructor(props) {
+    super(props);
+    this.state={items: [], text: ''};
+    this.handleChange=this.hanldeChange.bind(this);
+    this.hondleSubmit=this.HandleSubmt.bind(this);
+}
+
+render(){
+    return(
+    <div> 
+    <h3>Tareas pendientes</h3>
+    <TodoList items={this.state.items} />
+    
+    </div>
+)
+}
+}
+~~~
